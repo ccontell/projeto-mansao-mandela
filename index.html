@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <title>Mansão Mandela</title>
+</head>
+
+<body>
+    <div class="mascara-form" onclick="hideForm()"></div>
+
+    <header>
+        <img src="./img/logo.png" class="logo-header" />
+        <a>Home
+            <img src="./img/rede social 2/home.png">
+        </a>
+        <a href="https://www.instagram.com/favelabeat_?igsh=MTdzMjJwNWFkdnBndA==" onclick="showForm()">Instagram
+            <img src="./img/rede social 2/instagram.png">
+        </a>
+        <a href="https://youtube.com/@mandelamandelinhaoficial?si=wa_LnoghE3fWdwKn">Nosso Canal
+            <img src="./img/rede social 2/youtube.png">
+        </a>
+        <a href="index2.html" target="_blank" rel="noopener noreferrer">Publique aqui
+            <img src="./img/redes social/postar2.png">
+        </a>
+    </header>
+
+    <div class="container">
+        <div class="background">
+            <video loop autoplay muted class="conteudo-background ">
+                <source src="./img/video.mp4">
+            </video>
+            <!-- <img src="./img/backgroud.jpeg" class="conteudo-background"/> -->
+            <div class="mascara-video"></div>
+        </div>
+                
+        <div class="sobre-nos">
+            <img src="./img/capa.png" class="logo">
+            <p>
+                🔥 *Mansão Mandela* — O berço dos maiores talentos do funk!
+Aqui, o som é pesado, a vibe é única e os sonhos viram realidade. A produtora que tá revolucionando o funk brasileiro com batidas originais, MCs de peso e muita atitude. 💥
+*Mansão Mandela*: onde o funk acontece de verdade! 🎶
+            </p>
+            <button onclick="showForm()">Entre em Contato</button>
+        </div>
+
+        <form class="fale-conosco"
+            action="https://formcarry.com/s/9FZ8B8sFiJB"
+            method="POST"
+            enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="tel" name="telefone" placeholder="telefone" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <textarea type="text" placeholder="Digite sua Duvida"></textarea>
+            <button type="submit">Fale Conosco</button>
+        </form>
+    </div>
+</body>
+
+<script src="scripts.js">
+    
+</script>
+
+</html>

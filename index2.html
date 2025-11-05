@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/site.webmanifest">
+    <link rel="stylesheet" href="style2.css">
+    <title>Mansão Mandela</title>
+</head>
+
+<body>
+    <div class="mascara-form" onclick="hideForm()"></div>
+
+    <header>
+        <img src="./img/logo.png" class="logo-header" />
+        <a href="index.html">Home
+            <img src="./img/rede social 2/home.png">
+        </a>
+        <a href="https://www.instagram.com/favelabeat_?igsh=MTdzMjJwNWFkdnBndA==" onclick="showForm()">Instagram
+            <img src="./img/rede social 2/instagram.png">
+        </a>
+        <a href="https://youtube.com/@mandelamandelinhaoficial?si=wa_LnoghE3fWdwKn">Nosso Canal
+            <img src="./img/rede social 2/youtube.png">
+        </a>
+        <a href="index2.html" target="_blank" rel="noopener noreferrer">Publique aqui
+            <img src="./img/redes social/postar2.png">
+        </a>
+    </header>
+
+    <div class="container">
+        <div class="background">
+            <video loop autoplay muted class="conteudo-background ">
+                <source src="./img/video.mp4">
+            </video>
+            <!-- <img src="./img/backgroud.jpeg" class="conteudo-background"/> -->
+            <div class="mascara-video"></div>
+        </div>
+
+        <div class="sobre-nos">
+            <form method="POST" action="https://script.google.com/macros/s/AKfycbybNTkhA-nrKjZJs68K0SeZITNQsKVjjYnK9SCl_0wroJa4pSxYJ8qmTOq96SlNcZ58dw/exec">
+            <div class="alinha">
+                
+                <label for="music">Nome da música</label>
+                <input id="music" type="text" required placeholder="Nome da Música">
+            </div>
+
+            <div class="alinha">
+                <label for="faixa">Faixa (.WAV)</label>
+                <input type="file" id="faixa" required accept="audio/*">
+            </div>
+
+
+            <div class="alinha">
+                <label for="capa">Capa (3000x3000)</label>
+                <input type="file" id="capa" accept="image/*">
+            </div>
+
+            <div class="alinha">
+                <label for="produtor">Produtor musical (Sem Abreviações)</label>
+                <input type="text" id="produtor" required placeholder="Nome do Produtor">
+            </div>
+
+            <div class="alinha">
+                <label for="sportfy">Link Spotify:</label>
+                <input type="url" id="sportfy" required placeholder="Link Sportfy">
+            </div>
+
+            <div class="alinha">
+                <label for="interpretes">Interpretes (Sem Abreviações)</label>
+                <input type="text" id="interpretes" required placeholder="Interpretes">
+            </div>
+
+            <div class="alinha">
+                <label for="link">Link Spotify:</label>
+                <input type="url" id="link" required placeholder="Seu Link Aqui">
+            </div>
+
+            <div class="alinha">
+                <label for="email">E-mail para Share Nomeado dos Participantes (OneRPM e Lujo)</label>
+                <input type="email" id="email" required placeholder="E-mail">
+            </div>
+
+            <div class="alinha">
+                <label for="artista">Nome Artístico</label>
+                <input type="text" id="artista" required placeholder="Digite seu nome artístico">
+            </div>
+
+            <div class="alinha">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" required placeholder="Digite seu nome completo">
+            </div>
+
+            <div class="alinha">
+                <label for="cpf">CPF</label>
+                <input id="cpf" required placeholder="000.000.000-00"
+                    onkeyup="document.getElementById('validation').innerHTML = validaCPF(this.value)">
+                <span id="validation"></span>
+            </div>
+
+            <div class="alinha">
+                <label for="data">Data de Lançamento (Se Tiver)</label>
+                <input type="date" id="data">
+            </div>
+
+            <div class="alinha">
+                <label for="telefone">Telefone de Contato (Whatsapp)</label>
+                <input type="tel" id="telefone" required placeholder="(xx) xxxxx-xxxx"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            </div>
+
+            <div id="infoadicionais">
+                <div id="campos">
+                    <label for="relatorio">Informações Adicionais </label>
+                    <textarea id="relatorio" rows="6" placeholder="Deixe sua Descrição"></textarea>
+                </div>
+                
+                <button type="submit" value="Enviar">Enviar</button>
+                <form id="botoes">
+                </form>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+</body>
+<script src="scripts.js"></script>
+
+</html>

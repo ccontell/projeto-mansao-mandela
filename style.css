@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+
+
+.mascara-form {
+    visibility: hidden;
+    transition: visibility 1s linear;
+    z-index: 3;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+}
+
+header a {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: #C51111;
+    transition: 0.5s color ease-in-out;
+}
+header a:active{
+    opacity: 0.6;
+    color: #b45c5c;
+
+}
+
+.logo-header {
+    height: 80px;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    height: 70vh;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.background {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+
+.conteudo-background {
+    height: auto;
+    width: auto;
+    min-width: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.mascara-video {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+
+
+button {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0;
+    padding: 10px 0;
+    border-radius: 3px;
+    background-color: #C51111;
+    width: 200px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+}
+button:hover{
+    background-color:  #680d0d;
+    transition: 0.2s color ease-in-out;
+}
+.logo {
+      height: 150px;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+
+.sobre-nos {
+    max-width: 40%;
+}
+
+.fale-conosco {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+    left: -350px;
+    transition: left 1s linear;
+    z-index: 4;
+    margin-top: -136px;
+    /* transform: translateX(0); */
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    outline-color: #18D80F;
+}
+
+textarea {
+    height: 80px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    outline-color: #18D80F;
+    padding: 10px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.whatsapp img {
+    height: 60px;
+}
+
+/* ============================= */
+/*  RESPONSIVIDADE - MOBILE/TABLET */
+/* ============================= */
+@media (max-width: 768px) and (orientation: landscape) {
+
+    /* Posiciona o formulário de contato de forma mais adequada em landscape (não cobre toda a altura) */
+    .fale-conosco {
+        display: block;
+        position: fixed;
+        left: 10px;           /* quando aberto, ficará visível à esquerda com margem */
+        right: 10px;          /* limitar largura pelo lado direito */
+        bottom: 15px;         /* fixa perto da base (ajuste se preferir centralizar) */
+        top: auto;
+        width: auto;
+        max-width: 350px;     /* ajustado para 350px */
+        padding: 16px;
+        border-radius: 10px;
+        transition: left 0.5s ease, right 0.5s ease, bottom 0.5s ease, transform 0.2s ease;
+        z-index: 6;
+        transform-origin: top left; /* ponto de referência para a escala */
+        transform: scale(0.7) translateY(0); /* reduz 30% */
+    }
+
+    /* Se preferir controlar estado via classe .open (recomendado), esconda por transform */
+    .fale-conosco {
+        transform: translateY(0);
+    }
+    .fale-conosco.hidden-por-rotacao {   /* classe auxiliar opcional para estado fechado em landscape */
+        transform: scale(0.8) translateY(110%);     /* mantém a escala ao esconder */
+    }
+}
+
+    /* ====== HEADER ====== */
+    header {
+        flex-direction: column;   /* Empilha logo e links */
+        align-items: center;      /* Centraliza horizontalmente */
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    .logo-header {
+        height: 60px;
+        margin: 10px 0;
+    }
+
+    header a {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin: 5px 0;
+    }
+
+    header a img {
+        height: 18px;
+    }
+
+    /* ====== CONTAINER ====== */
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        height: auto;
+    }
+
+    /* ====== FORMULÁRIO ====== */
+    .sobre-nos {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+        /* padding: 20px; */
+        border-radius: 10px;
+        /* background-color: rgba(245, 222, 179, 0.95); */
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .alinha {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+
+    .sobre-nos input,
+    .sobre-nos textarea {
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid gray;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    button {
+        width: 100%;
+        height: 45px;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    /* ====== BACKGROUND / VÍDEO ====== */
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+    }
+
+    .conteudo-background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    /* ====== TEXTO / PARÁGRAFOS ====== */
+    p {
+        display: none; /* Oculta textos longos */
+    }
+
+    /* ====== WHATSAPP ICON ====== */
+    .whatsapp img {
+        height: 50px;
+    }
