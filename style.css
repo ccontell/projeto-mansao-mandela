@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Mukta', sans-serif;
+    font-family: 'Mukta', sans-serif, Permanent "Permanent Marker" , cursive;
+    
+    
 }
-
-
 
 .mascara-form {
     visibility: hidden;
@@ -21,7 +21,6 @@ header {
     display: flex;
     align-items: center;
     gap: 30px;
-    
 }
 
 header a {
@@ -103,13 +102,17 @@ button:hover{
       height: 150px;
 }
 
-p {
-    color: white;
-    font-size: 20px;
-}
-
 .sobre-nos {
     max-width: 40%;
+}
+.app {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .fale-conosco {
@@ -159,13 +162,13 @@ textarea {
 /* ============================= */
 /*  RESPONSIVIDADE - MOBILE/TABLET */
 /* ============================= */
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-width: 500px) {
 
     /* Posiciona o formulário de contato de forma mais adequada em landscape (não cobre toda a altura) */
     .fale-conosco {
         display: block;
         position: fixed;
-        left: 10px;           /* quando aberto, ficará visível à esquerda com margem */
+        left: -350px;           /* quando aberto, ficará visível à esquerda com margem */
         right: 10px;          /* limitar largura pelo lado direito */
         bottom: 15px;         /* fixa perto da base (ajuste se preferir centralizar) */
         top: auto;
@@ -189,13 +192,13 @@ textarea {
 }
 
     /* ====== HEADER ====== */
-    header {
-        flex-direction: column;   /* Empilha logo e links */
-        align-items: center;      /* Centraliza horizontalmente */
-        justify-content: center;
-        gap: 10px;
-        padding: 15px 10px;
-        text-align: center;
+  header {
+            flex-direction: column;    /* Itens em coluna */
+            align-items: center;       /* Centraliza horizontalmente */
+            justify-content: center;   /* Centraliza verticalmente */
+            gap: 10px;
+            padding: 15px;
+            text-align: center;
     }
 
     .logo-header {
@@ -238,6 +241,16 @@ textarea {
         gap: 12px;
         font-size: 14px;
     }
+
+    .app {
+        font-family: "Permanent Marker", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        margin-top: 20px;
+}
 
     .alinha {
         display: flex;
@@ -285,13 +298,10 @@ textarea {
         left: 0;
     }
 
-    /* ====== TEXTO / PARÁGRAFOS ====== */
-    p {
-        display: block; /* Mostra textos */
-        font-size: 14px;
-    }
 
     /* ====== WHATSAPP ICON ====== */
     .whatsapp img {
         height: 50px;
     }
+
+}

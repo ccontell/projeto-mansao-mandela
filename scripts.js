@@ -64,3 +64,18 @@ const form = document.querySelector('.fale-conosco')
 
   
 }
+var app = document.getElementById('app');
+
+var typewriter = new Typewriter(app, {
+  loop: true
+});
+
+typewriter
+  .typeString('* Mansão Mandela* — O berço dos maiores talentos do funk ! Aqui, o som é pesado, a vibe é única e os sonhos viram realidade.')
+  .pauseFor(2500)
+  .deleteAll()
+  .typeString('Produtora que tá revolucionando o funk brasileiro com batidas originais, MCs de peso e muita atitude.')
+  .pauseFor(2500)
+  .deleteChars(28)
+  .typeString('*Mansão Mandela* Onde o funk acontece de verdade!!!')
+  .start();
