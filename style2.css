@@ -209,6 +209,7 @@ textarea {
     }
 
     .logo-header {
+        display:none;
         height: 60px;
     }
 
