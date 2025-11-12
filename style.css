@@ -287,7 +287,8 @@ textarea {
 
     /* ====== TEXTO / PARÁGRAFOS ====== */
     p {
-        display: none; /* Oculta textos longos */
+        display: block; /* Mostra textos */
+        font-size: 14px;
     }
 
     /* ====== WHATSAPP ICON ====== */
